@@ -1,3 +1,4 @@
+import com.sun.xml.internal.bind.v2.runtime.Name;
 
 // the Tile class represents a single Tile on the GameBoard. 
 // This is where the other objects in the game are stored. 
@@ -10,6 +11,13 @@ public class Tile{
 	// - Tile Art - 
 	private String deadTileArt = "Dead.png";
 	private String aliveTileArt = "Alive.png";
+	private boolean isAlive;
+	
+	
+	public Tile() {
+		isAlive = false;
+	}
+	
 	
 	// Provided
 	// Tiles states (for art)
@@ -20,5 +28,17 @@ public class Tile{
 		}else{
 			return deadTileArt; // if using different costing tiles
 		}
+	}
+	
+	public boolean isAlive() {
+		return isAlive;
+	}
+	
+	public String toString() {
+		if (isAlive()) {
+			return "The Tile is alive ,it has * neighbors and * neighbors still alive.";
+		} else {
+			return "The Tile isn't alive ,it has * neighbors and * neighbors still alive.";
+		}	
 	}
 }
