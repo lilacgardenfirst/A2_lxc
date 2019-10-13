@@ -1,5 +1,3 @@
-import com.sun.xml.internal.bind.v2.runtime.Name;
-
 // the Tile class represents a single Tile on the GameBoard. 
 // This is where the other objects in the game are stored. 
 // Used for Cellular Automata
@@ -12,6 +10,7 @@ public class Tile{
 	private String deadTileArt = "Dead.png";
 	private String aliveTileArt = "Alive.png";
 	private boolean isAlive;
+	private TileList neighborsList;
 	
 	
 	public Tile() {
