@@ -10,7 +10,7 @@ public class Tile{
 	private String deadTileArt = "Dead.png";
 	private String aliveTileArt = "Alive.png";
 	private boolean isAlive;
-	private TileList neighborsList;
+	private TileList neighbors;
 	
 	
 	public Tile() {
@@ -38,6 +38,19 @@ public class Tile{
 			return "The Tile is alive ,it has * neighbors and * neighbors still alive.";
 		} else {
 			return "The Tile isn't alive ,it has * neighbors and * neighbors still alive.";
-		}	
+		}			
+	}
+	
+	public void setRandom(double randomProb) {
+		if(randomProb == 0.0) isAlive = false;
+		if(randomProb ==  1.0) isAlive = true;
+		
+		if(randomProb == 0.5) {
+			if (Math.random() >= 0.5) {
+				isAlive = true;
+			} else {
+				isAlive = false;
+			}
+		}
 	}
 }
