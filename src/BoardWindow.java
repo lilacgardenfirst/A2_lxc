@@ -7,6 +7,9 @@
 // 
 // Drawing libraries
 import javax.swing.*;
+
+import com.sun.istack.internal.FinalArrayList;
+
 import java.awt.*;
 import java.awt.event.*; //This is needed for the mouse and key events
 import java.awt.image.BufferedImage; // BufferedImage
@@ -68,7 +71,7 @@ public class BoardWindow extends JFrame{
      * Constructor for objects of class Board
      * Accepts references to both the GameBoard and Controller.
      */
-    public BoardWindow(GameBoard board, Controller controls){
+    public BoardWindow(GameBoard board, final Controller controls){
         // Let the board reference our other controller classes
         this.board = board;
         this.controls = controls;

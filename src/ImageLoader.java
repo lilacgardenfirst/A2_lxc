@@ -11,7 +11,7 @@ public class ImageLoader{
 	
 	// File Names
 	private static String sampleFile = "Alive.png"; // Basic file for testing
-	private static final String path = "./Resources/"; // The Images must be in the Resources folder at the ROOT folder of your project (might be different in IntelliJ or Eclipse!)
+	private static final String path = "src\\Resources\\"; // The Images must be in the Resources folder at the ROOT folder of your project (might be different in IntelliJ or Eclipse!)
 
 	// Hashtable is a datastructure that stores key value pairs. See COMP 2140 for details
 	private static Hashtable<String,BufferedImage> images = new Hashtable<String,BufferedImage>();
